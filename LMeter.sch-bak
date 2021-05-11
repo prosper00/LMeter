@@ -1,0 +1,479 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 609AD99A
+P 4900 3900
+F 0 "A1" H 4900 2811 50  0000 C CNN
+F 1 "LGT8F328P - Nano 3 clone" H 4900 2720 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 4900 3900 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 4900 3900 50  0001 C CNN
+	1    4900 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Display_Character:HY1602E DS1
+U 1 1 609AE86D
+P 2900 2200
+F 0 "DS1" V 2946 1356 50  0000 R CNN
+F 1 "HY1602E" V 2855 1356 50  0000 R CNN
+F 2 "Display:HY1602E" H 2900 1300 50  0001 C CIN
+F 3 "http://www.icbank.com/data/ICBShop/board/HY1602E.pdf" H 3100 2300 50  0001 C CNN
+	1    2900 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR04
+U 1 1 609AFD5B
+P 2500 2750
+F 0 "#PWR04" H 2500 2500 50  0001 C CNN
+F 1 "Earth" H 2500 2600 50  0001 C CNN
+F 2 "" H 2500 2750 50  0001 C CNN
+F 3 "~" H 2500 2750 50  0001 C CNN
+	1    2500 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR07
+U 1 1 609B01E1
+P 3700 2350
+F 0 "#PWR07" H 3700 2100 50  0001 C CNN
+F 1 "Earth" H 3700 2200 50  0001 C CNN
+F 2 "" H 3700 2350 50  0001 C CNN
+F 3 "~" H 3700 2350 50  0001 C CNN
+	1    3700 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR06
+U 1 1 609B08D4
+P 3250 1750
+F 0 "#PWR06" H 3250 1500 50  0001 C CNN
+F 1 "Earth" H 3250 1600 50  0001 C CNN
+F 2 "" H 3250 1750 50  0001 C CNN
+F 3 "~" H 3250 1750 50  0001 C CNN
+	1    3250 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR02
+U 1 1 609B0D58
+P 1950 1800
+F 0 "#PWR02" H 1950 1550 50  0001 C CNN
+F 1 "Earth" H 1950 1650 50  0001 C CNN
+F 2 "" H 1950 1800 50  0001 C CNN
+F 3 "~" H 1950 1800 50  0001 C CNN
+	1    1950 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR09
+U 1 1 609B11B8
+P 5300 4900
+F 0 "#PWR09" H 5300 4650 50  0001 C CNN
+F 1 "Earth" H 5300 4750 50  0001 C CNN
+F 2 "" H 5300 4900 50  0001 C CNN
+F 3 "~" H 5300 4900 50  0001 C CNN
+	1    5300 4900
+	1    0    0    -1  
+$EndComp
+Connection ~ 5000 4900
+Wire Wire Line
+	5000 4900 5300 4900
+Wire Wire Line
+	2500 2600 2500 2750
+Wire Wire Line
+	3700 2200 3700 2350
+$Comp
+L power:+5V #PWR01
+U 1 1 609B21AA
+P 1950 1300
+F 0 "#PWR01" H 1950 1150 50  0001 C CNN
+F 1 "+5V" H 1965 1473 50  0000 C CNN
+F 2 "" H 1950 1300 50  0001 C CNN
+F 3 "" H 1950 1300 50  0001 C CNN
+	1    1950 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR05
+U 1 1 609B2FBD
+P 2900 1300
+F 0 "#PWR05" H 2900 1150 50  0001 C CNN
+F 1 "+5V" H 2915 1473 50  0000 C CNN
+F 2 "" H 2900 1300 50  0001 C CNN
+F 3 "" H 2900 1300 50  0001 C CNN
+	1    2900 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 609B34B5
+P 1950 2200
+F 0 "#PWR03" H 1950 2050 50  0001 C CNN
+F 1 "+5V" H 1965 2373 50  0000 C CNN
+F 2 "" H 1950 2200 50  0001 C CNN
+F 3 "" H 1950 2200 50  0001 C CNN
+	1    1950 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR08
+U 1 1 609B3BCD
+P 4800 2750
+F 0 "#PWR08" H 4800 2600 50  0001 C CNN
+F 1 "+5V" H 4815 2923 50  0000 C CNN
+F 2 "" H 4800 2750 50  0001 C CNN
+F 3 "" H 4800 2750 50  0001 C CNN
+	1    4800 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 2200 2100 2200
+Wire Wire Line
+	3000 1800 3000 1750
+Wire Wire Line
+	3000 1750 3250 1750
+Wire Wire Line
+	4800 2750 4800 2900
+Wire Wire Line
+	3500 2600 3500 3500
+Wire Wire Line
+	3500 3500 4400 3500
+Wire Wire Line
+	3400 2600 3400 3600
+Wire Wire Line
+	3400 3600 4400 3600
+Wire Wire Line
+	3300 2600 3300 3700
+Wire Wire Line
+	3300 3700 4400 3700
+Wire Wire Line
+	3200 2600 3200 3800
+Wire Wire Line
+	3200 3800 4400 3800
+Wire Wire Line
+	2300 2600 2300 4400
+Wire Wire Line
+	2300 4400 4400 4400
+Wire Wire Line
+	2600 2600 2600 4500
+Wire Wire Line
+	2600 4500 4400 4500
+$Comp
+L Device:R_POT_US RV1
+U 1 1 609BC77C
+P 1950 1550
+F 0 "RV1" H 1883 1596 50  0000 R CNN
+F 1 "R_POT_US" H 1883 1505 50  0000 R CNN
+F 2 "" H 1950 1550 50  0001 C CNN
+F 3 "~" H 1950 1550 50  0001 C CNN
+	1    1950 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 1300 1950 1400
+Wire Wire Line
+	1950 1700 1950 1800
+Wire Wire Line
+	2100 1550 2300 1550
+Wire Wire Line
+	2300 1550 2300 1800
+$Comp
+L Device:R_US R1
+U 1 1 609BECD4
+P 2900 1550
+F 0 "R1" H 2968 1596 50  0000 L CNN
+F 1 "10k" H 2968 1505 50  0000 L CNN
+F 2 "" V 2940 1540 50  0001 C CNN
+F 3 "~" H 2900 1550 50  0001 C CNN
+	1    2900 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 1300 2900 1400
+Wire Wire Line
+	2900 1700 2900 1800
+Wire Wire Line
+	4400 4200 4250 4200
+Text Label 4250 4200 2    50   ~ 0
+SQ_WAVE
+$Comp
+L Transistor_FET:2N7000 Q1
+U 1 1 609C6272
+P 7450 4300
+F 0 "Q1" H 7654 4346 50  0000 L CNN
+F 1 "2N7000" H 7654 4255 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7650 4225 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 7450 4300 50  0001 L CNN
+	1    7450 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AMS1117 U1
+U 1 1 609C6D8F
+P 6550 2950
+F 0 "U1" H 6550 3192 50  0000 C CNN
+F 1 "AMS1117" H 6550 3101 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 6550 3150 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 6650 2700 50  0001 C CNN
+	1    6550 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR011
+U 1 1 609C730B
+P 6550 3350
+F 0 "#PWR011" H 6550 3100 50  0001 C CNN
+F 1 "Earth" H 6550 3200 50  0001 C CNN
+F 2 "" H 6550 3350 50  0001 C CNN
+F 3 "~" H 6550 3350 50  0001 C CNN
+	1    6550 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR010
+U 1 1 609C781B
+P 6250 2750
+F 0 "#PWR010" H 6250 2600 50  0001 C CNN
+F 1 "+5V" H 6265 2923 50  0000 C CNN
+F 2 "" H 6250 2750 50  0001 C CNN
+F 3 "" H 6250 2750 50  0001 C CNN
+	1    6250 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+1V2 #PWR014
+U 1 1 609C9185
+P 6850 2750
+F 0 "#PWR014" H 6850 2600 50  0001 C CNN
+F 1 "+1V2" H 6865 2923 50  0000 C CNN
+F 2 "" H 6850 2750 50  0001 C CNN
+F 3 "" H 6850 2750 50  0001 C CNN
+	1    6850 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 609CA83C
+P 6850 3200
+F 0 "C2" V 6700 3200 50  0000 C CNN
+F 1 "10u" V 6600 3200 50  0000 C CNN
+F 2 "" H 6850 3200 50  0001 C CNN
+F 3 "~" H 6850 3200 50  0001 C CNN
+	1    6850 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 609CAE44
+P 6250 3200
+F 0 "C1" H 6158 3154 50  0000 R CNN
+F 1 "10u" H 6158 3245 50  0000 R CNN
+F 2 "" H 6250 3200 50  0001 C CNN
+F 3 "~" H 6250 3200 50  0001 C CNN
+	1    6250 3200
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 609D3A8B
+P 7250 4500
+F 0 "R2" V 7045 4500 50  0000 C CNN
+F 1 "100" V 7136 4500 50  0000 C CNN
+F 2 "" V 7290 4490 50  0001 C CNN
+F 3 "~" H 7250 4500 50  0001 C CNN
+	1    7250 4500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR013
+U 1 1 609DB169
+P 7550 4850
+F 0 "#PWR013" H 7550 4600 50  0001 C CNN
+F 1 "Earth" H 7550 4700 50  0001 C CNN
+F 2 "" H 7550 4850 50  0001 C CNN
+F 3 "~" H 7550 4850 50  0001 C CNN
+	1    7550 4850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:L_Core_Ferrite L1
+U 1 1 609DC4EA
+P 7550 3400
+F 0 "L1" H 7638 3446 50  0000 L CNN
+F 1 "33u" H 7638 3355 50  0000 L CNN
+F 2 "" H 7550 3400 50  0001 C CNN
+F 3 "~" H 7550 3400 50  0001 C CNN
+	1    7550 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+1V2 #PWR012
+U 1 1 609DCF11
+P 7550 3200
+F 0 "#PWR012" H 7550 3050 50  0001 C CNN
+F 1 "+1V2" H 7565 3373 50  0000 C CNN
+F 2 "" H 7550 3200 50  0001 C CNN
+F 3 "" H 7550 3200 50  0001 C CNN
+	1    7550 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 3600 8250 3600
+Text Label 8250 3600 0    50   ~ 0
+TP_1
+Wire Wire Line
+	7550 3750 8250 3750
+Text Label 8250 3750 0    50   ~ 0
+TP_2
+$Comp
+L Device:C_Small C3
+U 1 1 609F410E
+P 6850 4250
+F 0 "C3" V 6700 4250 50  0000 C CNN
+F 1 "2.2u" V 6600 4250 50  0000 C CNN
+F 2 "" H 6850 4250 50  0001 C CNN
+F 3 "~" H 6850 4250 50  0001 C CNN
+	1    6850 4250
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_US R3
+U 1 1 609F44AD
+P 7000 4250
+F 0 "R3" V 6795 4250 50  0000 C CNN
+F 1 "1k" V 6886 4250 50  0000 C CNN
+F 2 "" V 7040 4240 50  0001 C CNN
+F 3 "~" H 7000 4250 50  0001 C CNN
+	1    7000 4250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 4900 5000 4900
+Wire Wire Line
+	6850 4050 6850 4150
+Wire Wire Line
+	7550 3550 7550 3600
+Wire Wire Line
+	7550 3200 7550 3250
+$Comp
+L Device:LED D1
+U 1 1 60A1BD79
+P 7300 4050
+F 0 "D1" H 7293 3795 50  0000 C CNN
+F 1 "blue" H 7293 3886 50  0000 C CNN
+F 2 "" H 7300 4050 50  0001 C CNN
+F 3 "~" H 7300 4050 50  0001 C CNN
+	1    7300 4050
+	1    0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR015
+U 1 1 60A2804A
+P 6850 4450
+F 0 "#PWR015" H 6850 4200 50  0001 C CNN
+F 1 "Earth" H 6850 4300 50  0001 C CNN
+F 2 "" H 6850 4450 50  0001 C CNN
+F 3 "~" H 6850 4450 50  0001 C CNN
+	1    6850 4450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 4050 7450 4050
+Wire Wire Line
+	7550 3750 7550 4050
+Connection ~ 7550 4050
+Wire Wire Line
+	7000 4100 7000 4050
+Wire Wire Line
+	7000 4050 6850 4050
+Wire Wire Line
+	6850 4050 6750 4050
+Connection ~ 6850 4050
+Text Label 6750 4050 2    50   ~ 0
+ADC
+Text Label 5500 3900 0    50   ~ 0
+ADC
+Wire Wire Line
+	5400 3900 5500 3900
+Wire Wire Line
+	6250 2950 6250 3100
+Connection ~ 6250 2950
+$Comp
+L power:Earth #PWR?
+U 1 1 60A5B2FC
+P 6250 3350
+F 0 "#PWR?" H 6250 3100 50  0001 C CNN
+F 1 "Earth" H 6250 3200 50  0001 C CNN
+F 2 "" H 6250 3350 50  0001 C CNN
+F 3 "~" H 6250 3350 50  0001 C CNN
+	1    6250 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3350 6250 3300
+Wire Wire Line
+	6250 2750 6250 2950
+Wire Wire Line
+	6850 2750 6850 2950
+Wire Wire Line
+	6550 3250 6550 3350
+Wire Wire Line
+	6850 2950 6850 3100
+Connection ~ 6850 2950
+$Comp
+L power:Earth #PWR?
+U 1 1 60A6289B
+P 6850 3350
+F 0 "#PWR?" H 6850 3100 50  0001 C CNN
+F 1 "Earth" H 6850 3200 50  0001 C CNN
+F 2 "" H 6850 3350 50  0001 C CNN
+F 3 "~" H 6850 3350 50  0001 C CNN
+	1    6850 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3350 6850 3300
+Wire Wire Line
+	7550 4050 7550 4100
+Wire Wire Line
+	7550 4500 7550 4850
+$Comp
+L power:Earth #PWR?
+U 1 1 60AA0F6F
+P 7000 4450
+F 0 "#PWR?" H 7000 4200 50  0001 C CNN
+F 1 "Earth" H 7000 4300 50  0001 C CNN
+F 2 "" H 7000 4450 50  0001 C CNN
+F 3 "~" H 7000 4450 50  0001 C CNN
+	1    7000 4450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4350 6850 4450
+Wire Wire Line
+	7000 4400 7000 4450
+Wire Wire Line
+	7000 4050 7150 4050
+Connection ~ 7000 4050
+Wire Wire Line
+	7250 4650 7250 4700
+Text Label 7250 4700 2    50   ~ 0
+SQ_WAVE
+Wire Wire Line
+	7250 4300 7250 4350
+$EndSCHEMATC
