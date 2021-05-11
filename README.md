@@ -1,6 +1,12 @@
 # LMeter
 Simple Arduino nano based inductor tester
 
+
+![Prototype](20210511_145031.jpg?raw=true "Prototype")
+![Prototype_1](20210511_144249.jpg?raw=true "Prototype Rear")
+
+![Schematic](LMeter.pdf?raw=true "Schematic")
+
 After measuring inductors with a function generator, an oscilloscope and a calculator, I decided that I needed a quicker way to measure inductor values, from ~1uH to ~100uH (or from 1uH to as high as I can manage).
 
 I stumbled upon this project (https://skootsone.yolasite.com/l-meter.php), which inspired me to actually cobble something quick and dirty and 'good enough' together. I don't have any mechanical meter movements around, and realized that buying one plus a cheap solar light to scavange from would cost more than using a $1 arduino clone board and character LCD. And, I already have them in my parts bin.
