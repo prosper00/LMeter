@@ -3,7 +3,7 @@ Simple Arduino nano based inductor tester
 
 
 ![Prototype](20210511_212253.jpg "Prototype")
-![Prototype_1](20210511_144249.jpg "Prototype Rear")
+![Prototype_1](20210512_093203.jpg "Prototype Rear")
 
 ![Schematic](LMeter.pdf?raw=true "Schematic")
 
