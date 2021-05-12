@@ -20,6 +20,7 @@ void setup() {
 
   Serial.begin(115200);
   lcd.begin(16, 2);
+  delay(100); // wait for the LCD to init
   
   //TCCR2B = TCCR2B & B11111000 | B00000001; // for PWM frequency of 65kHz @ 32MHz on Tim2 channels
 
@@ -76,18 +77,27 @@ void loop() {
   //digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
   //delay(900);                       // wait for a second
   //digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-  delay(100);                       // wait for a second
   
-  
+  delay(300);                       // wait for the LCD
+    
   lcd.setCursor(0,0);
   lcd.print("        ");
   lcd.setCursor(0,0);
-  lcd.print(ReadInductor());
-  delay(900);
+  lcd.print(curveFit(ReadInductor()));
 }
 
 uint16_t ReadInductor(void){
   uint32_t runningtotal = 0;
   for(int i=0; i<30; i++) runningtotal+=analogRead(A0);
   return (uint16_t)(runningtotal/30);
+}
+
+/*curve-fitting analysis from several hundred inductors tested shows that
+ * y = 21337840*e^(-1*(x+12785.47)^2/(2*2927.016^2))
+ * (gaussian curve)
+ * for all values of x from 10 to 470, give or take a tiny bit
+ */
+float curveFit(uint16_t voltage){
+  #define euler 2.71828
+  return 21337840*pow(euler, (-1*pow((voltage+12785.47),2)/(2*pow(2927.016,2))));
 }
