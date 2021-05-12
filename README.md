@@ -16,3 +16,34 @@ The concept is simple enough - apply a square wave (I settled on 200kHz) to an i
 Using a microcontroller (as opposed to a mechanical movement) does give me a bit of additional flexability to potentially extend functionality down the road. For example, I've seen some methods for measuring saturation current, which I might eventually implement here.
 
 The end result of all of this is a circuit which produces an output of roughly 0V (infine inductance / open circuit) to 3.6V (zero inductance / short circuit), which is sampled by the ADC. Right now, I'm just spitting that raw value out to the LCD. Next, I need to measure out a bunch of different inductor values, and plot out a response curve. Hopefully, I can approximate a function that describes the curve - then I'll have the uC do some math, and spit out a result in uH. Otherwise, I'll build a mapping table to use.
+
+I scanned about a hundred labelled +/-20% inductors from my kit, averaged out the values received for each increment, and charted them out:
+|Labelled Inductor Value|Average ADC reading|
+|:-:|:-:|
+|0|3060|
+|.27|3049|
+|.56|3038|
+|1|3033|
+|2.2|2990|
+|2.7|2996|
+|4.7|2931|
+|5.6|2919|
+|6.8|2888|
+|10|2811|
+|22|2537|
+|33|2408|
+|47|2192|
+|68|1992|
+|100|1722|
+|150|1541|
+|220|1238|
+|330|1008|
+|470|770|
+|560|697|
+|1000|514|
+|2200|572|
+|10000|554|
+
+I found a curve fitting program online, and it approximated a function of: "y = 21337840*e^(-1*(x+12785.47)^2/(2*2927.016^2))" for values between 10uH and 470uH. Coding that into the uC, I now get an approximated reading, in uH, for inductors from 10uH to about 500uH.
+
+I can adjust the square wave frequency programatically, so, I might be able to fine tune things for inductors <10uH and >500uH by adjusting the frequency when the ADC reading is below or above a certain threshold. Future tweaks....
