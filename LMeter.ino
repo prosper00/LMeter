@@ -28,6 +28,7 @@ void setup() {
 
   //Speed up ADC. On AVR, comment out the following, or adjust the prescaler value to something higher. (64?)
   //ADCSRA = ((0 << ADPS0) | (0 << ADPS1) | (1 << ADPS2));   // ADC prescaler to 16, ADC Clk to 2MHz / 133MSpS
+  
   setFrequency(200000);
 }
 
@@ -90,6 +91,8 @@ void loop() {
   lcd.setCursor(5, 0);
   lcd.print(curveFit(voltage));
   lcd.setCursor(5, 1);
+  lcd.print("        ");
+  lcd.setCursor(5, 1);
   lcd.print(voltage);
 }
 
@@ -101,10 +104,19 @@ uint16_t ReadInductor(void) {
 
 /*curve-fitting analysis from several hundred inductors tested shows that
    y = 21337840*e^(-1*(x+12785.47)^2/(2*2927.016^2))
-   (gaussian curve)
    for all values of x from 10 to 470, give or take a tiny bit
+
+   linear curve from 0 to 10uH:
+   y = 123.531 + -0.04*voltage
+
+   https://elsenaju.eu/Calculator/online-curve-fit.htm
 */
 float curveFit(uint16_t voltage) {
-#define euler 2.71828
-  return 21337840 * pow(euler, (-1 * pow((voltage + 12785.47), 2) / (2 * pow(2927.016, 2))));
+
+  //curve 1 - valid from voltage = 2850 to 3100
+  if (voltage > 2850) return (123.531 + (-0.04*voltage));
+  //curve 2 - valid from voltage = 650 to 2850
+  if (voltage > 650)  return 21337840 * pow(M_E, (-1 * pow((voltage + 12785.47), 2) / (2 * pow(2927.016, 2))));
+  //curve 3 - valid from voltage = 0 to 650mV
+  return 999.99;
 }
